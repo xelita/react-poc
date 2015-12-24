@@ -5,7 +5,7 @@ var ReactDOM = require('react-dom');
 // HelloMessage component
 
 var HelloMessage = React.createClass({
-    render: function() {
+    render: function () {
         return <li>Hello {this.props.name}!</li>;
     }
 });
@@ -13,10 +13,10 @@ var HelloMessage = React.createClass({
 // Messages list component
 
 var MessageList = React.createClass({
-    render: function() {
+    render: function () {
         var messagesList = this.props.messages || [];
         var componentsList = [];
-        messagesList.forEach(function(item){
+        messagesList.forEach(function (item) {
             componentsList.push(<HelloMessage key={item.name} name={item.name}/>);
         });
 
@@ -30,7 +30,7 @@ var messages = [
     {name: "xelita"},
     {name: "prism"},
     {name: "cybersami"},
-    {name: "mrtot"},
+    {name: "mrtot"}
 ];
 
 ReactDOM.render(
