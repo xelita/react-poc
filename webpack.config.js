@@ -1,8 +1,8 @@
 module.exports = {
     entry: [
         "./js/main.js",
-        "./js/reducers.js",        
-        "./js/stores.js"
+        "./js/hello.js",
+        "./js/counter.js"
     ],
     output: {
         path: __dirname + "/dist",
