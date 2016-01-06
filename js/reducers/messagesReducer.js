@@ -1,14 +1,13 @@
-import { combineReducers } from 'redux'
 import * as ActionTypes from "../actions/actionTypes"
 
-const messagesReducer = (state = [], action) => {
+export const messagesReducer = (state = [], action) => {
     switch (action.type) {
         case ActionTypes.LOAD_MESSAGES:
             return loadMessages(state, action);
         case ActionTypes.ADD_MESSAGE:
-            return loadMessages(state, action);
+            return addMessage(state, action);
         case ActionTypes.REMOVE_MESSAGE:
-            return loadMessages(state, action);
+            return removeMessage(state, action);
         case ActionTypes.REMOVE_ALL_MESSAGES:
             return removeAllMessages(state, action);
         default:
@@ -42,10 +41,3 @@ const removeAllMessages = (state, action) => {
         messages: []
     })
 };
-
-const appInfoReducer = (state = {appName: "react-poc"}, action) => state;
-
-export const reactApp = combineReducers({
-    messagesReducer,
-    appInfoReducer
-});
