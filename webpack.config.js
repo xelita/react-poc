@@ -1,7 +1,6 @@
 module.exports = {
     entry: [
-        "./js/main.js",
-        "./js/actions/actionTypes.js"
+        "./js/main.js"
     ],
     output: {
         path: __dirname + "/dist",

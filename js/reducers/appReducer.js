@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import {messagesReducer} from "messagesReducer"
-import {appInfoReducer} from "appInfoReducer"
+import { messages } from './messagesReducer'
+import { appInfo } from './appInfoReducer'
 
 export const appReducer = combineReducers({
-    messagesReducer,
-    appInfoReducer
+    messages,
+    appInfo
 });

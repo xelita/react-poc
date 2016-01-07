@@ -1,9 +1,9 @@
 import * as ActionTypes from "../actions/actionTypes"
 
-export const messagesReducer = (state = [], action) => {
+export const messages = (state = [], action) => {
     switch (action.type) {
         case ActionTypes.LOAD_MESSAGES:
-            return loadMessages(state, action);
+            return loadMessages(state);
         case ActionTypes.ADD_MESSAGE:
             return addMessage(state, action);
         case ActionTypes.REMOVE_MESSAGE:
@@ -15,10 +15,8 @@ export const messagesReducer = (state = [], action) => {
     }
 };
 
-const loadMessages = (state, action) => {
-    return Object.assign({}, state, {
-        messages: action.messages
-    })
+const loadMessages = (state) => {
+    return Object.assign([], state, someMessages)
 };
 
 const addMessage = (state, action) => {
@@ -36,8 +34,12 @@ const removeMessage = (state, action) => {
     })
 };
 
-const removeAllMessages = (state, action) => {
-    return Object.assign({}, state, {
-        messages: []
-    })
-};
+const removeAllMessages = () =>[];
+
+
+let someMessages = [
+    {name: "xelita"},
+    {name: "prism"},
+    {name: "cybersami"},
+    {name: "mrtot"}
+];
